@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import { MenuPage } from '../menu/menu.page';
+import { GotoPage } from '../goto/goto.page';
 
 @NgModule({
   imports: [
@@ -18,6 +20,6 @@ import { HomePage } from './home.page';
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, MenuPage, GotoPage]
 })
 export class HomePageModule {}

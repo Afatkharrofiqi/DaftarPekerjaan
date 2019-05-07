@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, MenuController } from '@ionic/angular';
 import { MovieapiService } from '../movieapi.service';
 
 @Component({
@@ -19,10 +19,5 @@ export class HomePage {
       this.movies = data;
       console.log(this.movies);
     });
-  }
-
-  goTo(url){
-    console.log(url);
-    this.navCtrl.navigateRoot(url);
   }
 }

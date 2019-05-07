@@ -11,16 +11,18 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item-sliding *ngFor="let task of tasks" #slidingItem>
+    <ion-item-sliding *ngFor="let task of tasks" #slidingItem>    
       <ion-item [ngClass]="{taskDone: task.status == 'done'}"> {{ task.title }} </ion-item>
       <ion-item-options (ionSwipe)="removeTask(slidingItem, task)">
-        <ion-button icon-only (click)="markAsDone(slidingItem, task)" color="secondary">
+          <ion-button icon-only (click)="markAsDone(slidingItem, task)" color="secondary">
           <ion-icon name="checkmark"></ion-icon>
         </ion-button>
-        <ion-button icon-only expandable (click)="removeTask(slidingItem, task)" color="danger">
+        <ion-button icon-only expandable (click)="removeTask(slidingItem, task)" color="danger">        
             <ion-icon name="trash"></ion-icon>
         </ion-button>
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
 </ion-content>
+
+<!-- <app-goto></app-goto> -->
